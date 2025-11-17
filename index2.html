@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explorar Mundo - Destinos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Explorar Mundo</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index2.html" class="ativo">Destinos</a></li>
+            <li><a href="index3.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="container">
+          <h2>Nossos Destinos</h2>
+          <p>
+            Explore nossa seleção de destinos incríveis ao redor do mundo. Temos
+            opções para todos os gostos e orçamentos.
+          </p>
+        </div>
+      </section>
+
+      <section class="destinos">
+        <div class="container">
+          <div class="filtros">
+            <h3>Filtrar por:</h3>
+            <div class="filtro-opcoes">
+              <button class="filtro-btn ativo" data-filtro="todos">
+                Todos
+              </button>
+              <button class="filtro-btn" data-filtro="europa">Europa</button>
+              <button class="filtro-btn" data-filtro="america">América</button>
+              <button class="filtro-btn" data-filtro="asia">Ásia</button>
+            </div>
+          </div>
+
+          <div class="destinos-grid">
+            <div class="destino-card" data-categoria="europa">
+              <img src="/imagens/louvre.webp" alt="Paris" />
+              <div class="destino-info">
+                <h3>Paris, França</h3>
+                <p>
+                  A cidade luz com sua arquitetura deslumbrante, museus famosos
+                  e gastronomia refinada.
+                </p>
+                <ul>
+                  <li>Torre Eiffel</li>
+                  <li>Museu do Louvre</li>
+                  <li>Arco do Triunfo</li>
+                  <li>Catedral de Notre-Dame</li>
+                </ul>
+                <div class="preco">A partir de R$ 3.800</div>
+                <a href="contato.html" class="btn">Solicitar Orçamento</a>
+              </div>
+            </div>
+
+            <div class="destino-card" data-categoria="asia">
+              <img src="imagens/toquio.jpg" alt="Tóquio" />
+              <div class="destino-info">
+                <h3>Tóquio, Japão</h3>
+                <p>
+                  Uma metrópole vibrante que combina tradição milenar com
+                  tecnologia de ponta.
+                </p>
+                <ul>
+                  <li>Templo Senso-ji</li>
+                  <li>Cruzamento de Shibuya</li>
+                  <li>Torre de Tóquio</li>
+                  <li>Palácio Imperial</li>
+                </ul>
+                <div class="preco">A partir de R$ 6.500</div>
+                <a href="contato.html" class="btn">Solicitar Orçamento</a>
+              </div>
+            </div>
+
+            <div class="destino-card" data-categoria="america">
+              <img src="/imagens/RJ.png" alt="Rio de Janeiro" />
+              <div class="destino-info">
+                <h3>Rio de Janeiro, Brasil</h3>
+                <p>
+                  Cidade maravilhosa com praias deslumbrantes, montanhas e um
+                  povo acolhedor.
+                </p>
+                <ul>
+                  <li>Cristo Redentor</li>
+                  <li>Pão de Açúcar</li>
+                  <li>Praia de Copacabana</li>
+                  <li>Floresta da Tijuca</li>
+                </ul>
+                <div class="preco">A partir de R$ 1.500</div>
+                <a href="contato.html" class="btn">Solicitar Orçamento</a>
+              </div>
+            </div>
+
+            <div class="destino-card" data-categoria="america">
+              <img src="/imagens/nova york.jpg" alt="Nova York" />
+              <div class="destino-info">
+                <h3>Nova York, EUA</h3>
+                <p>
+                  A cidade que nunca dorme, com arranha-céus icônicos e
+                  diversidade cultural.
+                </p>
+                <ul>
+                  <li>Estátua da Liberdade</li>
+                  <li>Central Park</li>
+                  <li>Times Square</li>
+                  <li>Empire State Building</li>
+                </ul>
+                <div class="preco">A partir de R$ 4.900</div>
+                <a href="contato.html" class="btn">Solicitar Orçamento</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Explorar Mundo - Todos os direitos reservados</p>
+        <div class="redes-sociais">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filtroBtns = document.querySelectorAll(".filtro-btn");
+        const destinoCards = document.querySelectorAll(".destino-card");
+
+        filtroBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            filtroBtns.forEach((b) => b.classList.remove("ativo"));
+            this.classList.add("ativo");
+
+            const filtro = this.getAttribute("data-filtro");
+
+            destinoCards.forEach((card) => {
+              if (
+                filtro === "todos" ||
+                card.getAttribute("data-categoria") === filtro
+              ) {
+                card.style.display = "block";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

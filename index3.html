@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explorar Mundo - Contato</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Explorar Mundo</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index2.html">Destinos</a></li>
+            <li><a href="index3.html" class="ativo">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="container">
+          <h2>Entre em Contato</h2>
+          <p>
+            Tem dúvidas sobre nossos pacotes ou precisa de um orçamento
+            personalizado? Entre em contato conosco!
+          </p>
+        </div>
+      </section>
+
+      <section class="contato">
+        <div class="container">
+          <div class="contato-info">
+            <h3>Informações de Contato</h3>
+            <ul>
+              <li>
+                <strong>Endereço:</strong>
+                <p>Av. Paulista, 1234 - São Paulo, SP</p>
+              </li>
+              <li>
+                <strong>Telefone:</strong>
+                <p>(11) 1234-5678</p>
+              </li>
+              <li>
+                <strong>E-mail:</strong>
+                <p>contato@explorarmundo.com.br</p>
+              </li>
+              <li>
+                <strong>Horário de Atendimento:</strong>
+                <p>Segunda a Sexta: 9h às 18h<br />Sábado: 9h às 13h</p>
+              </li>
+            </ul>
+
+            <div class="redes-sociais">
+              <h3>Siga-nos nas redes sociais</h3>
+              <div class="social-links">
+                <a href="#" class="social-link facebook">Facebook</a>
+                <a href="#" class="social-link instagram">Instagram</a>
+                <a href="#" class="social-link twitter">Twitter</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="formulario-contato">
+            <h3>Envie sua Mensagem</h3>
+            <form>
+              <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" />
+              </div>
+
+              <div class="form-group">
+                <label for="destino">Destino de Interesse</label>
+                <select id="destino" name="destino">
+                  <option value="">Selecione um destino</option>
+                  <option value="paris">Paris, França</option>
+                  <option value="toquio">Tóquio, Japão</option>
+                  <option value="rio">Rio de Janeiro, Brasil</option>
+                  <option value="nova-york">Nova York, EUA</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" checked />
+                  <span class="checkmark"></span>
+                  Desejo receber ofertas e novidades por e-mail
+                </label>
+              </div>
+
+              <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Explorar Mundo - Todos os direitos reservados</p>
+        <div class="redes-sociais">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
